@@ -1,0 +1,59 @@
+---
+title: "Post Live session 6"
+author: "Brian Kruse, Josh Klein, Paul Widhalm, Tracie Scott"
+date: "October 17, 2016"
+output: html_document
+---
+
+## R Markdown
+```{/users/briankruse/ids/live session 6/analysis/data/read data.r}
+```
+Descriptive Statistics from rolling sales staten island 
+Variable	Var Type	Ind/Depend
+BOROUGH	categorical	Independent
+NEIGHBORHOOD	categorical	Independent
+BUILDING CLASS CATEGORY	categorical	Independent
+TAX CLASS AT PRESENT	categorical	Independent
+BLOCK	categorical	Independent
+LOT	character	Independent
+EASE-MENT	categorical	Independent
+BUILDING CLASS AT PRESENT	categorical	Independent
+ADDRESS	character	Independent
+APARTMENT NUMBER	character	Independent
+ZIP CODE	character	Independent
+RESIDENTIAL UNITS	integer	Independent
+COMMERCIAL UNITS	integer	Independent
+TOTAL UNITS	calculation	Independent
+LAND SQUARE FEET	integer	Independent
+GROSS SQUARE FEET	integer	Independent
+YEAR BUILT	date	Independent
+TAX CLASS AT TIME OF SALE	categorical	Independent
+BUILDING CLASS AT TIME OF SALE	categorical	Independent
+ SALE PRICE 	$	dependent
+SALE DATE	date	Independent
+
+The following R code produces summary and header statistics
+The script continues with manipulating the staten island rolling wave data set
+by counting the sales prices tahat are NA.
+Converting all square feet variables and year built variable into numeric
+
+```{/users/briankruse/ids/live session 6/analysis/analysis1.r}
+```
+
+
+The following R code produces a historgram of the sales prices and demonstrates that sales
+price is not normally distributed.
+Next, the r code includes only real sales and follows up with two plots
+1) square feet to sales price
+2) log square feet to log sales price
+
+The code continues with only selecting Family Homes and counts the number of columns and rows
+the r code includes only real sales of family homes and follows up with one plot and one summary
+1) Plot log square feet to log sales price
+2) Summary that excludes price outliers above 100000
+
+Finally, the analysis code eliminates outliers that seem like they were not actual sales
+
+
+```{/users/briankruse/ids/live session 6/analysis/analysis2.r}
+```
